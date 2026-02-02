@@ -1,34 +1,48 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { DinnerIcon, GlassIcon, MusicIcon, PalmLeaf, RingsIcon } from "./decorative-elements"
 
 const events = [
   {
     time: "14:00",
     title: "Previos",
     description: "Preparativos y bienvenida",
+    icon: MusicIcon,
   },
   {
     time: "16:00",
     title: "Ceremonia",
     description: "Unión matrimonial",
+    icon: RingsIcon,
   },
   {
     time: "18:00",
     title: "Cóctel",
     description: "Brindis de celebración",
+    icon: GlassIcon,
   },
   {
     time: "19:00",
     title: "Banquete",
     description: "Cena y fiesta",
+    icon: DinnerIcon,
   },
 ]
 
+
 export function Timeline() {
   return (
-    <section className="py-24 px-6 bg-background">
-      <div className="max-w-2xl mx-auto">
+    <section className="py-24 px-6 bg-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 left-10 w-48 h-48 text-primary/5 pointer-events-none">
+        <PalmLeaf className="w-full h-full rotate-45" />
+      </div>
+      <div className="absolute bottom-10 right-0 w-56 h-56 text-accent/5 pointer-events-none">
+        <PalmLeaf className="w-full h-full -rotate-[160deg]" />
+      </div>
+
+      <div className="max-w-2xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,8 +74,10 @@ export function Timeline() {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full md:-translate-x-1/2 ring-4 ring-background" />
+                {/* Timeline icon drawing */}
+                <div className="absolute left-4 md:left-1/2 w-10 h-10 bg-card border border-primary/20 rounded-full md:-translate-x-1/2 ring-4 ring-background flex items-center justify-center z-10">
+                  <event.icon className="w-5 h-5 text-primary/70" />
+                </div>
 
                 {/* Content */}
                 <div

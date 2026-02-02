@@ -15,6 +15,8 @@ import React, { useState } from "react"
 
 import { submitRSVP } from "@/app/actions"
 
+import { PalmLeaf, SeaShell } from "./decorative-elements"
+
 export function RSVPForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -63,8 +65,21 @@ export function RSVPForm() {
   }
 
   return (
-    <section className="py-24 px-6 bg-muted/30" id="rsvp">
-      <div className="max-w-xl mx-auto">
+    <section className="py-24 px-6 bg-muted/30 relative overflow-hidden" id="rsvp">
+      {/* Background decorations - Adjusted for desktop */}
+      <div className="absolute inset-0 pointer-events-none container mx-auto relative overflow-visible">
+        <div className="absolute -bottom-10 -right-10 md:right-0 w-64 h-64 text-primary/5 -rotate-12">
+          <PalmLeaf className="w-full h-full" />
+        </div>
+        <div className="absolute top-10 -left-10 md:left-0 w-40 h-40 text-accent/5 rotate-45">
+          <SeaShell className="w-full h-full" />
+        </div>
+      </div>
+
+      <div className="max-w-xl mx-auto relative z-10">
+        <div className="flex justify-center mb-8">
+          <SeaShell className="w-12 h-12 text-primary/20" />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

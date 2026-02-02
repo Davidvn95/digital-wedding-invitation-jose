@@ -1,28 +1,57 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { DelicateFlower, PalmLeaf } from "./decorative-elements"
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 opacity-20">
-        <svg viewBox="0 0 200 200" className="w-full h-full text-primary">
-          <path
-            fill="currentColor"
-            d="M40,80 Q60,20 100,40 Q140,60 120,100 Q100,140 60,120 Q20,100 40,80"
-            opacity="0.3"
-          />
-        </svg>
-      </div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 opacity-20">
-        <svg viewBox="0 0 200 200" className="w-full h-full text-accent">
-          <path
-            fill="currentColor"
-            d="M40,80 Q60,20 100,40 Q140,60 120,100 Q100,140 60,120 Q20,100 40,80"
-            opacity="0.3"
-          />
-        </svg>
+      {/* Decorative elements - Adjusted for desktop visibility */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden container mx-auto relative">
+        <motion.div 
+          animate={{ 
+            y: [0, -15, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute -top-10 -left-10 md:left-0 w-64 h-64 text-primary/10"
+        >
+          <PalmLeaf className="w-full h-full" />
+        </motion.div>
+
+        <motion.div 
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -5, 0]
+          }}
+          transition={{ 
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/4 -right-10 md:right-0 w-80 h-80 text-accent/10"
+        >
+          <PalmLeaf className="w-full h-full rotate-[160deg]" />
+        </motion.div>
+
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.1, 0.2, 0.1]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-20 left-10 md:left-20 w-32 h-32 text-primary/20"
+        >
+          <DelicateFlower className="w-full h-full" />
+        </motion.div>
       </div>
 
       <motion.div
@@ -59,7 +88,7 @@ export function HeroSection() {
             Miércoles, 18 de Marzo de 2026
           </p>
           <p className="text-base font-sans font-light text-muted-foreground/80">
-            Coveñas, Sucre - Colombia
+            Tolú, Sucre - Colombia
           </p>
           <p className="text-sm font-sans font-light text-muted-foreground/70 mt-2">
             14:00 horas

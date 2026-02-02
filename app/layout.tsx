@@ -24,7 +24,7 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   title: 'José Luis & Lorena - Nuestra Boda',
-  description: 'Te invitamos a celebrar nuestra boda - 17 de Marzo de 2026 en Coveñas, Sucre',
+  description: 'Te invitamos a celebrar nuestra boda - 17 de Marzo de 2026 en Tolú, Sucre',
   generator: 'v0.app',
   icons: {
     icon: [

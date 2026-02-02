@@ -1,7 +1,7 @@
-'use client';
+"use client"
 
-import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import { motion } from "framer-motion";
+import { SeaShell } from "./decorative-elements";
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
 
           <div className='flex items-center justify-center gap-2 text-muted-foreground mb-8'>
             <span className='w-8 h-px bg-border' />
-            <Heart className='w-4 h-4 text-primary fill-primary' />
+            <SeaShell className='w-5 h-5 text-primary/60' />
             <span className='w-8 h-px bg-border' />
           </div>
 

@@ -1,18 +1,20 @@
 "use client"
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Envelope } from "@/components/wedding/envelope"
-import { HeroSection } from "@/components/wedding/hero-section"
-import { EventDetails } from "@/components/wedding/event-details"
-import { Timeline } from "@/components/wedding/timeline"
 import { Countdown } from "@/components/wedding/countdown"
-import { RSVPForm } from "@/components/wedding/rsvp-form"
+import { Envelope } from "@/components/wedding/envelope"
+import { EventDetails } from "@/components/wedding/event-details"
 import { Footer } from "@/components/wedding/footer"
+import { HeroSection } from "@/components/wedding/hero-section"
 import { MusicPlayer } from "@/components/wedding/music-player"
+import { RSVPForm } from "@/components/wedding/rsvp-form"
+import { Timeline } from "@/components/wedding/timeline"
 import { TransitionScreen } from "@/components/wedding/transition-screen"
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react"
 
 type ViewState = "envelope" | "transition" | "invitation"
+
+import { WeddingQuote } from "@/components/wedding/wedding-quote"
 
 export default function WeddingInvitation() {
   const [currentView, setCurrentView] = useState<ViewState>("envelope")
@@ -60,6 +62,7 @@ export default function WeddingInvitation() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <HeroSection />
+            <WeddingQuote />
             <Countdown />
             <EventDetails />
             <Timeline />

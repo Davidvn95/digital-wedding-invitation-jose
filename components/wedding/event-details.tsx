@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MapPin, Clock, Calendar, Church } from "lucide-react"
+import { Calendar, Church, Clock, MapPin } from "lucide-react"
+import { DelicateFlower } from "./decorative-elements"
 
 const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/c9o1zXqDXJ8ZmyC79"
 
@@ -19,7 +20,7 @@ const details = [
   {
     icon: Church,
     title: "Ceremonia",
-    info: "Coveñas, Sucre",
+    info: "Tolú, Sucre",
   },
   {
     icon: MapPin,
@@ -31,8 +32,13 @@ const details = [
 
 export function EventDetails() {
   return (
-    <section className="py-24 px-6 bg-card">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-24 px-6 bg-card relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 -right-10 -translate-y-1/2 w-48 h-48 text-primary/5 pointer-events-none">
+        <DelicateFlower className="w-full h-full rotate-12" />
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
