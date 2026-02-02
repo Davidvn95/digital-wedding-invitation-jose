@@ -1,18 +1,19 @@
 "use client"
 
-import React from "react"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Textarea } from "@/components/ui/textarea"
+import { AnimatePresence, motion } from "framer-motion"
 import { Check, Heart, MessageSquare } from "lucide-react"
+import React, { useState } from "react"
 
 // Para conectar con Google Sheets, necesitas:
 // 1. Crear un Google Form o usar Google Apps Script
 // 2. Configurar la variable de entorno NEXT_PUBLIC_GOOGLE_FORM_URL con la URL del formulario
+
+import { submitRSVP } from "@/app/actions"
 
 export function RSVPForm() {
   const [formData, setFormData] = useState({
@@ -31,37 +32,27 @@ export function RSVPForm() {
     setError(null)
 
     try {
-      const googleFormUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL
+      // Usar Server Action para evitar CORS y problemas de env vars en el cliente
+      const result = await submitRSVP(formData)
 
-      if (googleFormUrl) {
-        // Enviar a Google Sheets via Google Apps Script
-        const response = await fetch(googleFormUrl, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nombre: formData.name,
-            email: formData.email,
-            asistencia: formData.attendance === "yes" ? "Sí" : "No",
-            mensaje: formData.message,
-            fecha: new Date().toLocaleString("es-CO"),
-          }),
-        })
-        
-        // Con mode: "no-cors" no podemos verificar la respuesta,
-        // pero asumimos que fue exitoso
+      if (result.success) {
         setIsSubmitted(true)
       } else {
-        // Si no hay URL configurada, simular envío
-        console.log("[v0] Formulario enviado (modo demo):", formData)
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        setIsSubmitted(true)
+        // Si falló (ej: no hay URL), simulamos éxito para que el usuario no vea error
+        // pero registramos el problema para el desarrollador
+        console.warn("[RSVP] Fallo en el envío real, simulando éxito:", result.error)
+        
+        if (!process.env.NEXT_PUBLIC_GOOGLE_FORM_URL && !process.env.GOOGLE_FORM_URL) {
+          // Si es por falta de URL, simplemente simulamos (modo demo)
+          await new Promise((resolve) => setTimeout(resolve, 1500))
+          setIsSubmitted(true)
+        } else {
+          setError("Hubo un error al enviar tu confirmación. Por favor intenta de nuevo.")
+        }
       }
     } catch (err) {
-      console.error("[v0] Error al enviar formulario:", err)
-      setError("Hubo un error al enviar tu confirmación. Por favor intenta de nuevo.")
+      console.error("[RSVP] Error inesperado:", err)
+      setError("Hubo un error al enviar tu el formulario. Por favor intenta de nuevo.")
     } finally {
       setIsSubmitting(false)
     }
