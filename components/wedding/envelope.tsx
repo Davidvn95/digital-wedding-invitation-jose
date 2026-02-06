@@ -5,9 +5,11 @@ import { motion } from "framer-motion"
 interface EnvelopeProps {
   onOpen: () => void
   isOpening: boolean
+  guestName?: string
+  quotas?: number
 }
 
-export function Envelope({ onOpen, isOpening }: EnvelopeProps) {
+export function Envelope({ onOpen, isOpening, guestName, quotas }: EnvelopeProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6 overflow-hidden">
       {/* Decorative background elements */}
@@ -123,8 +125,22 @@ export function Envelope({ onOpen, isOpening }: EnvelopeProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: isOpening ? 0 : 1 }}
         transition={{ duration: 0.3 }}
-        className="mt-12 text-center"
+        className="mt-12 text-center space-y-4"
       >
+        {quotas !== undefined && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="mb-8"
+          >
+            <p className="text-xl sm:text-2xl font-serif italic text-primary font-medium tracking-wide">
+              {guestName ? `${guestName}, h` : "H"}emos reservado {quotas} {quotas === 1 ? 'cupo' : 'cupos'} para ti
+            </p>
+            <div className="w-12 h-px bg-primary/40 mx-auto mt-3" />
+          </motion.div>
+        )}
+
         <motion.p
           animate={{ y: [0, -5, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}

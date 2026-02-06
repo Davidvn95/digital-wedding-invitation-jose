@@ -50,7 +50,7 @@ export function EventDetails() {
             Los detalles
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground">
-            Cuándo & Dónde
+            ¿Cuándo & Dónde?
           </h2>
         </motion.div>
 

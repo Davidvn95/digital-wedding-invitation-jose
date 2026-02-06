@@ -1,4 +1,45 @@
 
+export function GeometricFrame({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="0.5" opacity="0.6" />
+      <circle cx="100" cy="100" r="84" stroke="currentColor" strokeWidth="0.3" opacity="0.4" />
+      <circle cx="100" cy="100" r="76" stroke="currentColor" strokeWidth="0.3" opacity="0.4" />
+    </svg>
+  )
+}
+
+export function HexagonFrame({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M100 20L170 60V140L100 180L30 140V60L100 20Z" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+      <path d="M100 25L165 62V138L100 175L35 138V62L100 25Z" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+    </svg>
+  )
+}
+
+export function LeafyCluster({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      {/* Main stem */}
+      <path d="M20 100C40 80 60 40 80 20" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+      {/* Leaves */}
+      <path d="M80 20C75 10 60 5 50 15C40 25 45 40 55 45C65 50 75 35 80 20Z" fill="currentColor" opacity="0.15" />
+      <path d="M80 20C75 10 60 5 50 15C40 25 45 40 55 45C65 50 75 35 80 20Z" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
+      
+      <path d="M60 40C50 35 35 30 25 40C15 50 20 65 35 70C50 75 60 55 60 40Z" fill="currentColor" opacity="0.1" />
+      <path d="M60 40C50 35 35 30 25 40C15 50 20 65 35 70C50 75 60 55 60 40Z" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+
+      <path d="M40 70C30 70 15 75 10 85C5 95 10 110 25 115C40 120 45 90 40 70Z" fill="currentColor" opacity="0.15" />
+      <path d="M40 70C30 70 15 75 10 85C5 95 10 110 25 115C40 120 45 90 40 70Z" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
+      
+      {/* Accent leaves on other side */}
+      <path d="M80 30C95 35 110 50 115 65C120 80 105 95 90 90C75 85 75 50 80 30Z" fill="currentColor" opacity="0.12" fillRule="evenodd" />
+      <path d="M80 30C95 35 110 50 115 65C120 80 105 95 90 90C75 85 75 50 80 30Z" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+    </svg>
+  )
+}
+
 export function PalmLeaf({ className }: { className?: string }) {
   return (
     <svg

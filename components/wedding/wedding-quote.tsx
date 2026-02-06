@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CoupleLineArt, SeaShell } from "./decorative-elements"
+import { CoupleLineArt, HexagonFrame, LeafyCluster, SeaShell } from "./decorative-elements"
 
 export function WeddingQuote() {
   return (
@@ -12,9 +12,17 @@ export function WeddingQuote() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="mb-10 flex justify-center"
+          className="mb-10 flex justify-center relative"
         >
-          <CoupleLineArt className="w-48 h-48 md:w-64 md:h-64 text-primary/40" />
+          <HexagonFrame className="absolute w-64 h-64 text-primary/10 -top-8" />
+          <motion.div
+            animate={{ rotate: [0, 5, 0] }}
+            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+            className="absolute -top-12 -left-12 w-24 h-24 text-accent/20"
+          >
+            <LeafyCluster className="w-full h-full" />
+          </motion.div>
+          <CoupleLineArt className="w-48 h-48 md:w-64 md:h-64 text-primary/40 relative z-10" />
         </motion.div>
 
         <motion.div

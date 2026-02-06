@@ -25,7 +25,7 @@ const events = [
   {
     time: "19:00",
     title: "Banquete",
-    description: "Cena y fiesta",
+    description: "Cena",
     icon: DinnerIcon,
   },
 ]
@@ -60,7 +60,7 @@ export function Timeline() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
 
           <div className="space-y-12">
             {events.map((event, index) => (
@@ -75,13 +75,13 @@ export function Timeline() {
                 }`}
               >
                 {/* Timeline icon drawing */}
-                <div className="absolute left-4 md:left-1/2 w-10 h-10 bg-card border border-primary/20 rounded-full md:-translate-x-1/2 ring-4 ring-background flex items-center justify-center z-10">
+                <div className="absolute left-0 md:left-1/2 w-10 h-10 bg-card border border-primary/20 rounded-full md:-translate-x-1/2 ring-4 ring-background flex items-center justify-center z-10">
                   <event.icon className="w-5 h-5 text-primary/70" />
                 </div>
 
                 {/* Content */}
                 <div
-                  className={`ml-12 md:ml-0 md:w-1/2 ${
+                  className={`ml-14 md:ml-0 md:w-1/2 ${
                     index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"
                   }`}
                 >

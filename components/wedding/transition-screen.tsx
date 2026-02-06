@@ -11,7 +11,7 @@ export function TransitionScreen({ onComplete }: TransitionScreenProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onComplete()
-    }, 4500)
+    }, 9000)
     return () => clearTimeout(timer)
   }, [onComplete])
 

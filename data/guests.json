@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Familia García", "slug": "familia-garcia", "quotas": 4 },
+  { "id": 2, "name": "Juan Pérez", "slug": "juan-perez", "quotas": 1 },
+  { "id": 3, "name": "María Rodríguez y Acompañante", "slug": "maria-rodriguez", "quotas": 2 },
+  { "id": 4, "name": "Familia Martínez", "slug": "familia-martinez", "quotas": 5 },
+  { "id": 5, "name": "Carlos López", "slug": "carlos-lopez", "quotas": 1 },
+  { "id": 6, "name": "Familia Vergara Coronado", "slug": "familia-vergara-coronado", "quotas": 2 }
+]
