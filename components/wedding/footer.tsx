@@ -16,7 +16,7 @@ export function Footer() {
             <span className='w-8 h-px bg-border' />
           </div>
 
-          <p className='font-sans text-sm text-muted-foreground font-light mb-2'>17 de Marzo, 2026</p>
+          <p className='font-sans text-sm text-muted-foreground font-light mb-2'>18 de Marzo, 2026</p>
           <p className='font-sans text-xs text-muted-foreground/60 tracking-wide'>#JoseYLorena2026</p>
         </motion.div>
       </div>

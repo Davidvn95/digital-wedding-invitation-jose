@@ -47,7 +47,7 @@ export function DressCode() {
           className="text-center mb-16"
         >
           <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4 font-sans font-light">
-            Cómo asistir
+            ¿Cómo asistir?
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground">
             Dress Code
