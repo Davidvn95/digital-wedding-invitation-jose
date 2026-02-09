@@ -21,7 +21,7 @@ export function WeddingGifts() {
           </div>
 
           <p className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed px-4">
-            "El regalo más valioso será su presencia; si desean bendecir nuestro nuevo hogar, agradeceremos la lluvia de sobres"
+            "Lo más valioso para nosotros es contar con su compañía en nuestro gran día. Pero si lo prefieren y desean hacernos un detalle, la lluvia de sobres será bienvenida. 💌"
           </p>
 
           <div className="flex flex-col items-center gap-4">

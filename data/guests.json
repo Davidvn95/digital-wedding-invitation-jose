@@ -1,8 +1,158 @@
 [
-  { "id": 1, "name": "Familia García", "slug": "familia-garcia", "quotas": 4 },
-  { "id": 2, "name": "Juan Pérez", "slug": "juan-perez", "quotas": 1 },
-  { "id": 3, "name": "María Rodríguez y Acompañante", "slug": "maria-rodriguez", "quotas": 2 },
-  { "id": 4, "name": "Familia Martínez", "slug": "familia-martinez", "quotas": 5 },
-  { "id": 5, "name": "Carlos López", "slug": "carlos-lopez", "quotas": 1 },
-  { "id": 6, "name": "Familia Vergara Coronado", "slug": "familia-vergara-coronado", "quotas": 2 }
+  {
+    "id": 1,
+    "name": "Familia Coronado Montiel",
+    "slug": "familia-coronado-montiel",
+    "quotas": 2
+  },
+  {
+    "id": 2,
+    "name": "Familia Vergara Coronado",
+    "slug": "familia-vergara-coronado",
+    "quotas": 2
+  },
+  {
+    "id": 3,
+    "name": "Mauricio Begambre",
+    "slug": "mauricio-begambre",
+    "quotas": 2
+  },
+  {
+    "id": 4,
+    "name": "keiner Donado",
+    "slug": "keiner-donado",
+    "quotas": 2
+  },
+  {
+    "id": 5,
+    "name": "Nalfy González",
+    "slug": "nalfy-gonzalez",
+    "quotas": 2
+  },
+  {
+    "id": 6,
+    "name": "Anotnio González",
+    "slug": "anotnio-gonzalez",
+    "quotas": 1
+  },
+  {
+    "id": 7,
+    "name": "Daniel González",
+    "slug": "daniel-gonzalez",
+    "quotas": 1
+  },
+  {
+    "id": 8,
+    "name": "Rocio Gonzalez",
+    "slug": "rocio-gonzalez",
+    "quotas": 1
+  },
+  {
+    "id": 9,
+    "name": "Bialis Gonzalez",
+    "slug": "bialis-gonzalez",
+    "quotas": 1
+  },
+  {
+    "id": 10,
+    "name": "Daniel González Tío",
+    "slug": "daniel-gonzalez-tio",
+    "quotas": 1
+  },
+  {
+    "id": 11,
+    "name": "Dennis González",
+    "slug": "dennis-gonzalez",
+    "quotas": 1
+  },
+  {
+    "id": 12,
+    "name": "Familia Castillo Coral",
+    "slug": "familia-castillo-coral",
+    "quotas": 2
+  },
+  {
+    "id": 13,
+    "name": "Libardo Andrés Castillo",
+    "slug": "libardo-andres-castillo",
+    "quotas": 1
+  },
+  {
+    "id": 14,
+    "name": "Yveen Morales",
+    "slug": "yveen-morales",
+    "quotas": 2
+  },
+  {
+    "id": 15,
+    "name": "Juan Carlos Mosquera",
+    "slug": "juan-carlos-mosquera",
+    "quotas": 2
+  },
+  {
+    "id": 16,
+    "name": "Alejandro Moreno",
+    "slug": "alejandro-moreno",
+    "quotas": 2
+  },
+  {
+    "id": 17,
+    "name": "Familia Madrigal",
+    "slug": "familia-madrigal",
+    "quotas": 4
+  },
+  {
+    "id": 18,
+    "name": "Luisa María Peláez",
+    "slug": "luisa-maria-pelaez",
+    "quotas": 2
+  },
+  {
+    "id": 19,
+    "name": "Liliana Coral",
+    "slug": "liliana-coral",
+    "quotas": 1
+  },
+  {
+    "id": 20,
+    "name": "Familia Moreno Coral",
+    "slug": "familia-moreno-coral",
+    "quotas": 2
+  },
+  {
+    "id": 21,
+    "name": "Gilberto Coral",
+    "slug": "gilberto-coral",
+    "quotas": 2
+  },
+  {
+    "id": 22,
+    "name": "John Fredy Rodriguez",
+    "slug": "john-fredy-rodriguez",
+    "quotas": 1
+  },
+  {
+    "id": 23,
+    "name": "Daniela Rodríguez",
+    "slug": "daniela-rodriguez",
+    "quotas": 1
+  },
+  {
+    "id": 24,
+    "name": "Valery Rodríguez",
+    "slug": "valery-rodriguez",
+    "quotas": 1
+  },
+  {
+    "id": 25,
+    "name": "Stefany Rodríguez",
+    "slug": "stefany-rodriguez",
+    "quotas": 2
+  },
+  {
+    "id": 26,
+    "name": "Glenis Coral",
+    "slug": "glenis-coral",
+    "quotas": 1
+  }
 ]
